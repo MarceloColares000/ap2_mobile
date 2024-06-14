@@ -1,0 +1,15 @@
+name: helloworld
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.0 <4.0.0'
+
+dependencies:
+  cupertino_icons: ^1.0.0
+  google_fonts: ^5.0.0 #Use latest version of package
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
