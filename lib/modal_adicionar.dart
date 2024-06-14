@@ -73,6 +73,12 @@ class _ModalAdicionarState extends State<ModalAdicionar> {
                 _emailController.text,
               );
               Navigator.of(context).pop();
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Contato cadastrado com sucesso!'),
+                  duration: Duration(seconds: 2),
+                ),
+              );
             }
           },
           child: Text('Adicionar'),

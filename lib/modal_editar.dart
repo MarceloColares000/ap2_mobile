@@ -47,6 +47,7 @@ class _ModalEditarState extends State<ModalEditar> {
             TextFormField(
               controller: _telefoneController,
               decoration: InputDecoration(labelText: 'Telefone'),
+              keyboardType: TextInputType.phone,
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'Por favor, insira um telefone';
@@ -83,6 +84,12 @@ class _ModalEditarState extends State<ModalEditar> {
                 _emailController.text,
               );
               Navigator.of(context).pop();
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Contato editado com sucesso!'),
+                  duration: Duration(seconds: 2),
+                ),
+              );
             }
           },
           child: Text('Salvar'),

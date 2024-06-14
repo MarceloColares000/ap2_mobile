@@ -46,6 +46,12 @@ class _PaginaListaContatosState extends State<PaginaListaContatos> {
               onPressed: () {
                 _deletarContato(index);
                 Navigator.of(context).pop();
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Contato apagado com sucesso!'),
+                    duration: Duration(seconds: 2),
+                  ),
+                );
               },
               child: Text('Deletar'),
             ),
